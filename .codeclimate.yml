@@ -1,21 +1,36 @@
-languages:
-   Ruby: true
-   JavaScript: true
-   Python: false
-   PHP: false
-
-exclude_paths:
- - "app/assets/javascripts/defer/*"
- - "app/assets/javascripts/ember-addons/*"
- - "lib/autospec/*"
- - "lib/es6_module_transpiler/*"
- - "lib/highlight_js/*"
- - "lib/import/*"
- - "lib/javascripts/*"
- - "lib/tasks/*"
- - "lib/*.js"
- - "public/*"
- - "script/*"
- - "spec/*"
- - "test/*"
- - "vendor/*"
+version: "2"     # required to adjust maintainability checks
+plugins:
+  structure:
+    enabled: false
+  duplication:
+    enabled: false
+  rubocop:
+    enabled: true
+    channel: "rubocop-0-49"
+  eslint:
+    enabled: false
+exclude_patterns:
+- vendor/**/*
+- db/**/*
+- config/environments/*
+- public/**/*
+- log/**/*
+- tmp/**/*
+- app/assets/**/*.html
+- app/assets/**/*.css
+- app/assets/**/*.less
+- app/assets/**/*.json
+- app/assets/**/fonts/**/*
+- app/assets/**/images/**/*
+- app/assets/**/img/**/*
+- app/assets/**/cssimg/**/*
+- app/assets/shared/lib/**/*
+- app/assets/shared/lib-legacy/**/*
+- app/assets/lib/**/*
+- app/assets/javascripts/**/*
+- app/assets/type/**/*
+- app/assets/node_modules/**/*
+- app/assets/**/node_modules/**/*
+- app/assets/asset_list/**/*
+- app/assets/gulp/**/*
+- app/assets/zest_station/**/*.png
